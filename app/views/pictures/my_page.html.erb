@@ -1,0 +1,19 @@
+<h1>Home page</h1>
+
+<%= link_to 'Add image', new_picture_path %>
+<div class="container">
+		<table class="table table-striped">
+			<tr>
+				<th>Name</th>
+				<th>Picture</th>
+			</tr>
+			<% @pictures.each do |pic| %>
+				<tr>
+					<td><%= inform.name %></td>
+					<td><%= link_to 'Delete', picture_path(pic),
+					method: :delete,
+					data: {confirm: "Are you sure?"} %></td>
+				</tr>
+		</table>
+		<% end -%>
+

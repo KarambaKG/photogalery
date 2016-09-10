@@ -1,1 +1,15 @@
 <h1>photogalery</h1>
+
+<div class="container">
+		<table class="table table-striped">
+			<tr>
+				<th>Name</th>
+				<th>Picture</th>
+			</tr>
+			<% @pictures.each do |inform| %>
+				<tr>
+					<td><%= inform.name %></td>
+				</tr>
+		</table>
+		<% end -%>
+</div>
