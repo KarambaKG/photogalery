@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	root 'pictures#index'
+	get '/users/:id', to: 'users#show', as: 'home'
 	
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :pictures

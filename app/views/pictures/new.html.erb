@@ -10,7 +10,7 @@
 			<% @pictures.each do |pic| %>
 				<tr>
 					<td><%= inform.title %></td>
-					<td><%= link_to 'Delete', new_picture_path(pic),
+					<td><%= link_to 'Delete', picture_path(pic),
 					method: :delete,
 					data: {confirm: "Are you sure?"} %></td>
 				</tr>
